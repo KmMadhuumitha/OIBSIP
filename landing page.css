@@ -1,0 +1,92 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+nav {
+  background-color: #eee;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+#hero {
+  background-color: #f2f2f2;
+}
+
+#features {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature {
+  margin: 20px;
+}
+
+#color-palette {
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.color {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: #888;
+}
+
+#boxes {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Add any additional styling as per your creativity */
