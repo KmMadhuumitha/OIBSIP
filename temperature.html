@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: rgb(9, 16, 16);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="number"] {
+      width: 200px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    select {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 7px 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div align="center">
+  <h1>Temperature Converter</h1>
+  <label for="temperature">Temperature:</label>
+  <input type="number" id="temperature" placeholder="Enter temperature">
+  <br><br>
+  <label for="unit">Unit:</label>
+  <select id="unit">
+    <br>
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+  <button onclick="convertTemperature()">Convert</button>
+  <div class="result">
+    <label for="convertedTemperature">Converted Temperature:</label>
+    <input type="text" id="convertedTemperature" readonly>
+  </div>
+</div>
+
+  <script>
+    function convertTemperature() {
+      const temperature = document.getElementById('temperature').value;
+      const unit = document.getElementById('unit').value;
+      let convertedTemperature = 0;
+
+      if (unit === 'celsius') {
+        convertedTemperature = (temperature * 9/5) + 32;
+      } else if (unit === 'fahrenheit') {
+        convertedTemperature = (temperature - 32) * 5/9;
+      } else if (unit === 'kelvin') {
+        convertedTemperature = parseFloat(temperature) + 273.15;
+      }
+
+      document.getElementById('convertedTemperature').value = convertedTemperature.toFixed(2);
+    }
+  </script>
+</body>
+</html>
